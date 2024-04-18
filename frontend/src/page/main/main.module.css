@@ -1,0 +1,19 @@
+.main{
+    position: fix;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width:100vw ;
+}
+
+.title{
+    font-size: 50px;
+    font-weight: 900;
+    color: #ffffff;
+    text-decoration: inherit;
+    text-align: center;
+    font-style: italic; /* 这里将文本设置为斜体 */
+    font-family: cursive; /* 这里将字体设置为艺术字体 */
+}

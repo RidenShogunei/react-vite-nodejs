@@ -1,11 +1,11 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import { routes } from './router';
+import { globalRouters } from './router';
 
 export default function App() {
   return (
     <Router>
       <Routes>
-        {routes.map((route, index) => (
+        {globalRouters.map((route, index) => (
           <Route 
             key={index}
             path={route.path} 
