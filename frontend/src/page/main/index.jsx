@@ -12,6 +12,7 @@ import Chatgpt from "../chatgpt/index";
 const { Header, Sider, Content } = Layout;
 const App = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const[choose,setChoose]=useState(1);
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
@@ -27,7 +28,7 @@ const App = () => {
             {
               key: "1",
               icon: <UserOutlined />,
-              label: "chatgpt对话",
+              label: "在线翻译",
             },
             {
               key: "2",
