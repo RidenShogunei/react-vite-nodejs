@@ -8,7 +8,7 @@ import {
 } from "@ant-design/icons";
 import { Button, Layout, Menu, theme } from "antd";
 import style from "./main.module.css";
-import Ill from "../illness/index";
+import Chatgpt from "../chatgpt/index";
 const { Header, Sider, Content } = Layout;
 const App = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -27,7 +27,7 @@ const App = () => {
             {
               key: "1",
               icon: <UserOutlined />,
-              label: "疾病查询",
+              label: "chatgpt对话",
             },
             {
               key: "2",
@@ -69,7 +69,7 @@ const App = () => {
             borderRadius: borderRadiusLG,
           }}
         >
-            <Ill />
+            <Chatgpt />
         </Content>
       </Layout>
     </Layout>
