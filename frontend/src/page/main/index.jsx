@@ -9,13 +9,21 @@ import {
 import { Button, Layout, Menu, theme } from "antd";
 import style from "./main.module.css";
 import Chatgpt from "../chatgpt/index";
+import Picture from "../picture";
 const { Header, Sider, Content } = Layout;
 const App = () => {
   const [collapsed, setCollapsed] = useState(false);
-  const[choose,setChoose]=useState(1);
+  const [choose, setChoose] = useState("1");
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+
+  let content;
+  if (choose === "1") {
+    content = <Chatgpt />;
+  } else {
+    content = <Picture />;
+  }
   return (
     <Layout className={style.main}>
       <Sider trigger={null} collapsible collapsed={collapsed}>
@@ -24,6 +32,10 @@ const App = () => {
           theme="dark"
           mode="inline"
           defaultSelectedKeys={["1"]}
+          onSelect={(key) => {
+            setChoose(key.key);
+            console.log("change", choose);
+          }}
           items={[
             {
               key: "1",
@@ -70,7 +82,7 @@ const App = () => {
             borderRadius: borderRadiusLG,
           }}
         >
-            <Chatgpt />
+         {content}
         </Content>
       </Layout>
     </Layout>
