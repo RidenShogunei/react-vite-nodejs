@@ -8,8 +8,6 @@ import {
 } from "@ant-design/icons";
 import { Button, Layout, Menu, theme } from "antd";
 import style from "./main.module.css";
-import Chatgpt from "../chatgpt/index";
-import Picture from "../picture";
 const { Header, Sider, Content } = Layout;
 const App = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -20,9 +18,7 @@ const App = () => {
 
   let content;
   if (choose === "1") {
-    content = <Chatgpt />;
   } else {
-    content = <Picture />;
   }
   return (
     <Layout className={style.main}>
@@ -82,7 +78,7 @@ const App = () => {
             borderRadius: borderRadiusLG,
           }}
         >
-         {content}
+          {content}
         </Content>
       </Layout>
     </Layout>
