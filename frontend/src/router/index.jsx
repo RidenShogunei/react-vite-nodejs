@@ -2,7 +2,6 @@ import { Navigate } from 'react-router-dom'
 import Login from '../page/login/index'
 import Main from '../page/main/index'
 import Register from '../page/register/index'
-
 export const globalRouters = [
     {
         path: '/',

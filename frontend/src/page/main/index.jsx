@@ -8,8 +8,11 @@ import {
 } from "@ant-design/icons";
 import { Button, Layout, Menu, theme } from "antd";
 import style from "./main.module.css";
+import { useNavigate } from 'react-router-dom';
+import Intro from '../../page/introduce/index'
 const { Header, Sider, Content } = Layout;
 const App = () => {
+  const navigate = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
   const [choose, setChoose] = useState("1");
   const {
@@ -18,6 +21,7 @@ const App = () => {
 
   let content;
   if (choose === "1") {
+    content=<Intro></Intro>
   } else {
   }
   return (
@@ -36,17 +40,17 @@ const App = () => {
             {
               key: "1",
               icon: <UserOutlined />,
-              label: "在线翻译",
+              label: "系统介绍",
             },
             {
               key: "2",
               icon: <VideoCameraOutlined />,
-              label: "自动识图",
+              label: "图片识别",
             },
             {
               key: "3",
               icon: <UploadOutlined />,
-              label: "nav 3",
+              label: "视频识别",
             },
           ]}
         />
