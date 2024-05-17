@@ -10,6 +10,7 @@ import { Button, Layout, Menu, theme } from "antd";
 import style from "./main.module.css";
 import { useNavigate } from 'react-router-dom';
 import Intro from '../../page/introduce/index'
+import Can from '../canvas/index'
 const { Header, Sider, Content } = Layout;
 const App = () => {
   const navigate = useNavigate();
@@ -22,7 +23,8 @@ const App = () => {
   let content;
   if (choose === "1") {
     content=<Intro></Intro>
-  } else {
+  } else if(choose === "2"){
+    content=<Can></Can>
   }
   return (
     <Layout className={style.main}>
@@ -40,17 +42,17 @@ const App = () => {
             {
               key: "1",
               icon: <UserOutlined />,
-              label: "系统介绍",
+              label: "鸟类识别",
             },
             {
               key: "2",
               icon: <VideoCameraOutlined />,
-              label: "图片识别",
+              label: "canvas使用",
             },
             {
               key: "3",
               icon: <UploadOutlined />,
-              label: "视频识别",
+              label: "胡言乱语",
             },
           ]}
         />

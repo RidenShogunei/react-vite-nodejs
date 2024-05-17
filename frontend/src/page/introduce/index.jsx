@@ -34,10 +34,10 @@ const usesound=()=>{
     },
     {
       key: "3",
-      label: "使用方法",
+      label: "下载渠道",
       children: (
         <p>
-          {text3}<Button onClick={usesound} type="primary">导航</Button>
+          {text3}<Button onClick={usesound} type="primary">下载</Button>
         </p>
       ),
     },
